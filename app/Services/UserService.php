@@ -31,7 +31,7 @@ class UserService
     {
         $user = $this->show($id);
 
-        if (isset($data['profile_image']) && $data['profile_image'] instanceof UploadedFile) {
+        if (isset($data['profile_image'])) {
             if ($user->image) {
                 $this->deleteImage($user->image);
             }
